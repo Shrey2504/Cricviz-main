@@ -1,0 +1,1 @@
+web gunicorn Cricviz.wsgi:application --log-file-

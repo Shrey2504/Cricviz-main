@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>Login 10</title>
+    <link rel="stylesheet" href='{% static "/Home/bootstrap/css/bootstrap.min.css" %}'/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href='{% static "/Home/css/styles.min.css" %}' />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.css"
+    />
+  </head>
+  <body class="img js-fullheight" style="background: rgb(0, 0, 0)">
+    <!-- Start: Black Navbar -->
+    {% include "Home/Nav.html" %}
+    <!-- End: Black Navbar -->
+    <section
+      class="ftco-section"
+      style="background: url('{% static "/Home/img/circ1.jpg" %}') center / cover no-repeat"
+    >
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-6 text-center mb-5">
+            <h2
+              class="heading-section"
+              style="
+                color: rgb(252, 252, 252);
+                font-weight: bold;
+                font-family: Almarai, sans-serif;
+              "
+            >
+              Login
+            </h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-6 col-lg-4">
+            <div class="login-wrap p-0">
+              <h3
+                class="text-center bounce animated mb-4"
+                style="
+                  color: rgb(255, 255, 255);
+                  font-family: Almarai, sans-serif;
+                  font-weight: bold;
+                "
+              >
+                Have an account?
+              </h3>
+              <form method="post" action="{% url 'login' %}?next={{ request.GET.next }}" class="signin-form">
+                {% csrf_token %}
+                <div class="form-group">
+                  <label class="form-label" for="id_username">Username:</label>
+                  <input class="form-control" name="username" type="text" id="id_username" placeholder="Username" required/>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="id_password">Password:</label>
+                  <div class="input-group">
+                    <input class="form-control" name="password" type="password" id="id_password" placeholder="Password" required/>
+                    <button type="button" class="btn btn-outline-secondary toggle-password" data-toggle="tooltip" data-placement="top" title="Toggle password visibility">
+                      <i class="fa fa-fw fa-eye field-icon"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <button class="btn btn-light form-control submit px-3" type="submit" style="background: #260f54; color: #83bdf8; font-family: Almarai, sans-serif;">
+                    Sign In
+                      </button>
+            </div>
+                <div class="d-md-flex form-group">
+                  <div class="w-50">
+                    <div class="form-check">
+                      <input class="form-check-input" name="remember" type="checkbox" id="id_remember_me" checked/>
+                      <label class="form-check-label" for="id_remember_me" style="color: #fff; font-family: Almarai, sans-serif;">
+                        Remember Me
+                      </label>
+                    </div>
+                  </div>
+                  <div class="w-50 text-md-right">
+                    <a href="#" style="color: #fff; font-family: Almarai, sans-serif;">Forgot Password</a>
+                  </div>
+                </div>
+                <p class="text-center w-100">— Or Sign In With —</p>
+                <div class="d-flex justify-content-center">
+                  <button class="btn btn-primary border-primary" type="button" style="background: #260f54; color: #fff; font-family: Almarai, sans-serif;">
+                    Google
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.js"></script>
+    <script src='{% static "/Home/js/script.min.js" %}' ></script>
+  </body>
+</html>

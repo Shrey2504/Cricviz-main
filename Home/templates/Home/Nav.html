@@ -1,0 +1,106 @@
+<nav
+        class="navbar navbar-light navbar-expand-md navbar-fixed-top navigation-clean-button"
+        style="
+          background: #001932;
+          border-radius: 20;
+          border-top-left-radius: 20;
+          border-top-right-radius: 20;
+          border-bottom-right-radius: 20;
+          border-bottom-left-radius: 20;
+          border-style: none;
+          padding-top: 0;
+          padding-bottom: 10px;
+          height: 91px;
+        "
+      >
+        <div class="container">
+          <button
+            data-bs-toggle="collapse"
+            class="navbar-toggler text-bg-primary"
+            data-bs-target="#navcol-1"
+          >
+            <span class="visually-hidden">Toggle navigation</span
+            ><span class="navbar-toggler-icon text-secondary"></span>
+          </button>
+          <div>
+            <a class="navbar-brand" href="#"
+              ><span
+                data-bss-hover-animate="flash"
+                style="
+                  font-family: Almarai, sans-serif;
+                  font-size: 30px;
+                  color: rgba(38, 105, 239, 0.9);
+                  font-weight: bold;
+                "
+                >CRICVIZ</span
+              >
+            </a>
+          </div>
+          <div
+            class="collapse navbar-collapse text-center"
+            data-aos="fade"
+            data-aos-once="true"
+            id="navcol-1"
+          >
+            <ul class="navbar-nav mx-auto nav-right">
+              <li class="nav-item" style="padding-right: 20px">
+                <a
+                  class="nav-link active"
+                  data-bss-hover-animate="pulse"
+                  href="{% url 'home' %}"
+                  style="
+                    color: rgba(106, 106, 222, 0.9);
+                    font-family: Almarai, sans-serif;
+                    font-weight: bold;
+                    font-size: 25px;
+                  "
+                  >Home
+                </a>
+              </li>
+              <li class="nav-item" style="padding-right: 21px">
+                <a
+                  class="nav-link"
+                  data-bss-hover-animate="pulse"
+                  href="{% url 'livescore' %}"
+                  style="
+                    color: rgba(106, 106, 222, 0.9);
+                    font-family: Almarai, sans-serif;
+                    font-weight: bold;
+                    font-size: 25px;
+                  "
+                  >Live Score</a
+                >
+              </li>
+              <li class="nav-item" style="padding-right: 20px">
+                <a
+                  class="nav-link"
+                  data-bss-hover-animate="pulse"
+                  href="{% url 'analysis' %}"
+                  style="
+                    color: rgba(106, 106, 222, 0.9);
+                    font-family: Almarai, sans-serif;
+                    font-weight: bold;
+                    font-size: 25px;
+                  "
+                  >Analysis</a
+                >
+              </li>
+              <li class="nav-item" style="padding-right: 20px">
+                <a
+                  class="nav-link"
+                  data-bss-hover-animate="pulse"
+                  href="{% url 'prediction_view' %}"
+                  style="
+                    color: rgba(106, 106, 222, 0.9);
+                    font-family: Almarai, sans-serif;
+                    font-weight: bold;
+                    font-size: 25px;
+                  "
+                  >Predict</a
+                >
+              </li>
+            </ul>
+            
+          </div>
+        </div>
+      </nav>

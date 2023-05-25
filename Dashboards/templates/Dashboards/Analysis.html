@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>Dashboards</title>
+    <link
+      rel="stylesheet"
+      href='{% static "/Dashboards/bootstrap/css/bootstrap.min.css" %}'
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href='{% static "/Dashboards/css/styles.min.css" %}'
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.css"
+    />
+  </head>
+  <body style="height: 100%; width: 100%">
+    <!-- Start: Black Navbar -->
+    {% include "Home/Nav.html" %}
+    <!-- End: Black Navbar -->
+    <div
+      style="
+        background: linear-gradient(
+          180deg,
+          #51b5e0 32%,
+          #b7edfe 48%,
+          #00607c 77%
+        );
+      "
+    >
+      <div class="container-fluid text-center">
+        <p
+          class="text-interactivedashboard text"
+          style="font-size:25px; font-family: Almarai, sans-serif; font-weight: bold; color: rgb(0, 0, 0)"
+        >
+          Interactive Dashboard for IPL
+        </p>
+        <div>
+          <iframe title="Report Section" width="100%" height="1060" src="https://app.powerbi.com/view?r=eyJrIjoiM2ZhZWM3OWYtYjEyOS00ZWYzLWEyMGUtMWE1ZThkYzc0YmY4IiwidCI6IjkzMGQ5Zjg3LTk4ZWQtNGUwZC1hMmFhLWEyZjRkM2MxMTI5YyJ9&pageName=ReportSection" frameborder="0" allowFullScreen="true"></iframe>
+          
+        </div>
+        <div>
+          <iframe title="PBL_stats_dashboard" width="100%" height="1060" src="https://app.powerbi.com/view?r=eyJrIjoiOGRmZTIzMDctMTA3NC00MTI4LThjZDYtMjhjNDFjZDI5YmFjIiwidCI6IjkzMGQ5Zjg3LTk4ZWQtNGUwZC1hMmFhLWEyZjRkM2MxMTI5YyJ9&pageName=ReportSection39b0c68fb80f34e49dfd" frameborder="0" allowFullScreen="true"></iframe>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.js"></script>
+    <script src='{% static "/Dashboards/js/script.min.js" %}'></script>
+  </body>
+</html>

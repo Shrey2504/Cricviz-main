@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+  <title>Login 10</title>
+  <link rel="stylesheet" href='{% static "/Home/bootstrap/css/bootstrap.min.css" %}' />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet"
+    href="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.css" />
+  <link rel="stylesheet" href='{% static "/Home/css/styles.min.css" %}' />
+</head>
+
+<body class="img js-fullheight" style="background: rgb(255, 255, 255)">
+  <!-- Start: Black Navbar -->
+  {% include "Home/Nav.html" %}
+  <!-- End: Black Navbar -->
+  <div class="text-start card-body p-md-5 text-black" id="main-div" style="
+        background: url('{% static " /Home/img/circ1.jpg" %}') left / cover no-repeat, rgba(85, 226, 235, 0.66);
+    border-width: 3px; border-color: rgb(8, 8, 8); border-radius: 6px; padding-left: 0px; padding-right: 0px; color:
+    rgb(0, 0, 0); "
+    >
+      <h2
+        class= " text-uppercase mb-5" style="text-align: center;
+         color: rgb(255, 249, 249);
+      ">
+    Sign up to&nbsp; Get Started
+    </h2>
+    <p style="text-align: center; font-size: 22px; color: rgb(255, 255, 255)">
+      <strong>You are just one step away from getting info that is all cricket at
+        your fingertips!</strong>
+    </p>
+    <!-- Creating Form -->
+    <form method="post" action="" enctype="multipart/form-data" name="UserForm">
+      {% csrf_token %}
+      <div class="justify-content-sm-center" style="width: 100%; padding: 5%; padding-bottom: 0px">
+        <label class="form-label text-start form-label" for="form3Example1m"
+          style="color: #fff; font-weight: bold">Username</label>
+        <input class="form-control-lg form-control" name="username" type="text" id="form3Example1m" style="
+          border-color: #0d6efd;
+          color: #000;
+        " placeholder="Username" />
+      </div>
+      <div class="form-outline mb-4" style="
+        margin-top: 18px;
+        padding: 5%;
+        padding-bottom: 0px;
+        padding-top: 0px;
+      ">
+        <label class="form-label form-label" for="form3Example1n" style="color: #fff; font-weight: bold">Full
+          Name</label>
+        <input class="form-control-lg form-control" name="full-name" type="text" id="form3Example1n"
+          style="border-color: #0d6efd" placeholder="Full Name" />
+      </div>
+      <div class="form-outline mb-4" style="
+        padding: 5%;
+        padding-right: 0px;
+        padding-bottom: 0px;
+        padding-top: 0px;
+      ">
+        <label class="form-label form-label" for="form3Example9" style="color: #fff; font-weight: bold">DOB:</label>
+        <input id="date-time-input" name="dob" class="form-control" type="date"
+          style="color: #fff; border-color: #0d6efd" />
+      </div>
+      <div class="form-outline mb-4" style="padding-left: 5%">
+        <label class="form-label form-label" for="form3Example97" style="
+          padding-left: 0px;
+          color: #fff;
+          font-weight: bold;
+          font-size: 19px;
+        ">Email-Id:</label>
+        <input class="form-control-lg form-control" name="email" type="text" id="form3Example97"
+          style="border-color: #0d6efd; min-width: 0px; padding-left: 5%" />
+      </div>
+      <div class="form-outline mb-4" style="
+  padding: 5%;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-top: 0px;
+">
+        <label class="form-label form-label" for="form3Example2"
+          style="color: #fff; font-weight: bold">Password:</label>
+        <input class="form-control-lg form-control" name="password" type="password" id="form3Example2"
+          style="border-color: #0d6efd " placeholder="Password" />
+      </div>
+      <div class="d-flex justify-content-start pt-3" style="padding-left: 5%">
+        <button class="btn btn-primary btn-lg me-2" type="reset">Reset all</button>
+        <button class="btn btn-light btn-lg" type="submit" style="background-color: #0d6efd; color: #fff">
+          Submit form
+        </button>
+      </div>
+    </form>
+
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.js"></script>
+  <script src='{% static "/Home/js/script.min.js" %}'></script>
+</body>
+
+</html>
